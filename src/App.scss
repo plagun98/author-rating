@@ -1,1 +1,9 @@
-@import '_reset.scss';
+// @import '_normalize';
+@import '_reset';
+@import '_variables';
+
+.App {
+  background: linear-gradient(to bottom, $dark-blue, $blue);
+  padding: 15px 0;
+  font-family: 'Roboto';
+}
