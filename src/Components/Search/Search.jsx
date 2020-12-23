@@ -8,7 +8,7 @@ const Search = ({ value, handler, placeholder }) => {
 
   return (
     <div className={styles.inputWrapper}>
-      <img src={SearchIcon} />
+      <img src={SearchIcon} alt="search" />
       <input type="search" placeholder={placeholder} value={value} onChange={handler} />
     </div>
   )

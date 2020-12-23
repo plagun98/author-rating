@@ -9,11 +9,12 @@ const TablePagination = ({ page, changeHandler, totalCount, itemsPerPage }) => {
   const handleIncrease = () => changeHandler(page + 1);
   return (
     <div className={styles.root}>
-      {!!page && <img src={Arrow} className={styles.arrow} onClick={handleDecrease} />}
+      {!!page && <img src={Arrow} className={styles.arrow} onClick={handleDecrease} alt="prev page" />}
       <span className={styles.itemsCounter}>
         {`${page * itemsPerPage + 1} - ${itemsPerPage * (page + 1) > totalCount ? totalCount : itemsPerPage * (page + 1)}`}
       </span>
-      {(totalCount - (page + 1) * itemsPerPage) > 0 && <img src={Arrow} className={styles.arrow} onClick={handleIncrease} />}
+      {(totalCount - (page + 1) * itemsPerPage) > 0 && 
+        <img src={Arrow} className={styles.arrow} onClick={handleIncrease} alt="next page" />}
     </div>
   )
 }
