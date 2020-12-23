@@ -1,8 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Search from '../Search/Search';
 import Table from '../Table';
 import TablePagination from '../Table/TablePagination';
-import TableRow from '../Table/TableRow';
 
 import styles from './Main.module.scss';
 
@@ -12,9 +11,9 @@ const Main = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [sortField, setSortField] = useState('');
   const ROWS_PER_PAGE = 10;
-  const byField = (field) => {
+  const byField = useCallback((field) => {
     return (a, b) => a[field] > b[field]? -1 : 1;
-  }
+  }, []);
   const filteredAuthors = useMemo(() => {
     let arr = authors.filter(author => author.name.toLowerCase().includes(searchValue.toLowerCase()));
     return arr.sort(byField(sortField));
