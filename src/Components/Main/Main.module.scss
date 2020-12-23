@@ -1,0 +1,11 @@
+@import 'src/variables';
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  min-height: 300px; //REMOVE THIS
+  margin: 0 auto;
+  background: $white;
+  border-radius: 5px;
+  box-shadow: $boxShadow;
+}
