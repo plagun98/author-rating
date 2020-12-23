@@ -1,0 +1,23 @@
+@import 'src/variables';
+
+.root {
+  color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 15px;
+  filter: invert(80%);
+
+  &:first-child {
+    transform: scale(-1, 1);
+  }
+}
+
+.itemsCounter {
+  padding: 0 20px;
+}

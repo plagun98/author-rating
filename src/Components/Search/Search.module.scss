@@ -3,19 +3,29 @@
 .inputWrapper {
   width: 100%;
   background: $light-blue;
-  padding: 15px 10px;
+  padding: 10px;
   padding-left: 20px;
   display: flex;
   align-items: center;
+  position: sticky;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  img {
+    max-height: 15px;
+  }
 }
 
 input {
   width: 100%;
   background: none;
   border: none;
+  outline: none;
   padding: 10px;
-}
-
-img {
-  max-height: 15px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
 }

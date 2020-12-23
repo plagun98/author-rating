@@ -1,11 +1,17 @@
 @import 'src/variables';
 
 .container {
-  max-width: 1200px;
-  width: 100%;
-  min-height: 300px; //REMOVE THIS
+  min-width: 600px;
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
-  background: $white;
-  border-radius: 5px;
-  box-shadow: $boxShadow;
+}
+
+.sortButtons {
+  display: flex;
+  padding: 10px 0;
+  & > button {
+    margin-right: 20px;
+    width: 150px;
+  }
 }

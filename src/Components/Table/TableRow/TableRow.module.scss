@@ -4,7 +4,7 @@
   width: 100%;
   padding: 10px 20px 10px 10px;
   display: flex;
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background: $light-blue;
   }
 }
@@ -31,12 +31,18 @@
   margin: 0 10px;
 }
 
-.name {
+.mainInfo {
+  max-width: 300px;
+  width: 100%;
+}
+
+.name, .views {
   font-weight: 900;
   font-size: 14px;
   line-height: 20px;
   white-space: nowrap;
   display: block;
+  text-overflow: ellipsis;
 }
 
 .pub_count {
@@ -47,5 +53,16 @@
 
 .medal {
   width: 100%;
-  flex-shrink: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 35px;
+  }
+}
+
+.views {
+  max-width: 100px;
+  width: 100%;
+  text-align: right;
 }

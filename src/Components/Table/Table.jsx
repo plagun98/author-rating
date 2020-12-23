@@ -4,12 +4,20 @@ import TableRow from './TableRow';
 
 import styles from './Table.module.scss';
 
-const Table = ({ data }) => {
-
+const Table = ({ data, page, perPage, bestByViews }) => {
   return (
-    <>
-      {data?.map((author, i) => <TableRow author={author} index={i} />)}
-    </>
+    <div className={styles.Table}>
+      {
+        data.length 
+          ? data?.map((author, i) => <TableRow 
+                                        author={author}
+                                        index={page * perPage + i}
+                                        key={i}
+                                        place={bestByViews.indexOf(author.pageviews) + 1}
+                                      />)
+          : <span className={styles.noItems}>Нет подходящих авторов</span>
+      }
+    </div>
   )
 }
 
