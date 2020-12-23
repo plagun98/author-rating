@@ -1,1 +1,14 @@
 @import 'src/variables';
+
+.Table {
+  background: $white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: $boxShadow;
+  overflow: hidden;
+}
+
+.noItems {
+  line-height: 40px;
+  padding-left: 20px;
+}
